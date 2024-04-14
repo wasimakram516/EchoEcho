@@ -21,35 +21,35 @@ To get started with EchoEcho, you need to set up both the frontend and backend. 
 
 ### Setting Up the Server
 
-### 1. Navigate to the `server` directory:
+# 1. Navigate to the `server` directory:
 
    cd server
 
-# Install dependencies:
+### Install dependencies:
 
 npm install
 
-# Start the server:
+### Start the server:
 
 npm start
 
-# Setting Up the Client
+### Setting Up the Client
 
-### 2. Navigate to the `client` directory:
+# 2. Navigate to the `client` directory:
 
 cd client
 
-# Install dependencies:
+### Install dependencies:
 
 npm install
 
-# Start the React development server:
+### Start the React development server:
 
 npm start
 
 The client will now be running on http://localhost:3000 and the server on http://localhost:5000 by default.
 
-# Environment Variables
+### Environment Variables
 
 Make sure to create a .env file in the server directory with the following variables:
 
@@ -58,7 +58,7 @@ JWT_SECRET=your_jwt_secret
 PORT=5000
 Replace your_jwt_secret with a secure, random string.
 
-# Features
+## Features
 
 User Authentication
 Real-time Chat
