@@ -1,0 +1,18 @@
+{
+  "name": "echoecho-backend",
+  "version": "1.0.0",
+  "description": "EchoEcho is a dynamic social media platform designed to foster community and connectivity. Utilizing the MERN stack, it features real-time communication, robust user interactions, and a scalable architecture to handle a growing user base.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wasim Akram",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "mongoose": "^8.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
