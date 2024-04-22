@@ -31,7 +31,7 @@ npm install
 
 ### Start the server:
 
-npm start
+npm run dev 
 
 ### Setting Up the Client
 
