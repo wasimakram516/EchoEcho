@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const CommentSchema = new mongoose.Schema(
+const replySchema = new mongoose.Schema(
   {
     text: {
       type: String,
@@ -12,15 +12,11 @@ const CommentSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    post: {
+    parentComment: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Post",
+      ref: "Comment",
       required: true,
     },
-    replies: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Reply",
-    }],
     isDeleted: {
       type: Boolean,
       default: false,
@@ -29,10 +25,10 @@ const CommentSchema = new mongoose.Schema(
       type: Date,
     },
   },
-  { timestamps: true } // it will automatically add createdAt and updatedAt feilds
+  { timestamps: true }
 );
 
-CommentSchema.index({ post: 1, createdAt: -1 });
+replySchema.index({ parentComment: 1, createdAt: -1 });
 
-const Comment = mongoose.model("Comment", CommentSchema);
-module.exports = Comment;
+const Reply = mongoose.model("Reply", replySchema);
+module.exports = Reply;
