@@ -1,15 +1,55 @@
 # Dependency directories
 node_modules/
-images/
+/.pnp
+.pnp.js
+
+# Next.js build output
+/.next
+/out
 
 # Environment configuration
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .env
 
 # Production build files
 /client/build/
 /server/dist/
 
+# Prisma
+/.prisma
+
 # OS and Editor folders
 .DS_Store
+Thumbs.db
+db.json
+*.log
+
 .idea/
 .vscode/
+
+# Local development
+*.swp
+*.lock
+*.bak
+*.tmp
+
+# Images and media
+/images/
+
+# Ignore npm logs and directories
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore debug log and pid file for npm
+npm-debug.log
+npm-debug.log.*
+npm.pid
+npmrc.log
+
+# Ignore Mac system files
+ehthumbs.db
+Icon?

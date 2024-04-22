@@ -4,7 +4,7 @@ const User = require("../models/User");
 const JWT_SECRET = process.env.JWT_SECRET;
 const asyncHandler = require("express-async-handler");
 
-// Extended authUser Middleware
+// authUser Middleware - To authenticate a logged in user
 const authUser = asyncHandler(async (req, res, next) => {
   const authHeader = req.header("Authorization");
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
@@ -32,7 +32,7 @@ const authUser = asyncHandler(async (req, res, next) => {
   }
 });
 
-// adminAuth Middleware
+// authAdmin Middleware - To validate whether the user is Admin or not
 const authAdmin = (req, res, next) => {
   if (req.user.userType!="admin") {
     return res.status(403).json({ message: "Access denied. Admins only." });

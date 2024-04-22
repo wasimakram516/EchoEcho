@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const RefreshToken = require("../models/RefreshToken");
 
 const generateTokens = async (userId) => {
-    const accessToken = jwt.sign({ id: userId }, process.env.JWT_SECRET, { expiresIn: '5d' });
+    const accessToken = jwt.sign({ id: userId }, process.env.JWT_SECRET, { expiresIn: '1h' });
     const refreshToken = jwt.sign({ id: userId }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' });
 
     // Save the refresh token

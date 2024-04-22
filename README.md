@@ -1,13 +1,13 @@
 # EchoEcho Social Media Platform
 
-Welcome to the EchoEcho Social Media Platform repository. EchoEcho is a platform designed to foster community and connectivity through real-time communication and robust user interactions. This monorepo contains both the client and server code necessary to run the EchoEcho application.
+Welcome to the EchoEcho Social Media Platform repository. EchoEcho is designed to foster community and connectivity through real-time communication and robust user interactions. This repository contains both the client and server code necessary to run the EchoEcho application using the Next.js and Node.js frameworks.
 
 ## Structure
 
 The repository is structured as follows:
 
-- `client`: The React frontend of the platform.
-- `server`: The Node.js/Express.js backend which includes the API and server logic.
+- `client`: The Next.js frontend of the platform.
+- `server`: The Node.js/Express.js backend including the API and server logic.
 
 ## Getting Started
 
@@ -21,51 +21,76 @@ To get started with EchoEcho, you need to set up both the frontend and backend. 
 
 ### Setting Up the Server
 
-# 1. Navigate to the `server` directory:
+1. Navigate to the `server` directory:
 
-   cd server
+```sh
+cd server
+```
 
-### Install dependencies:
+2. Install dependencies:
 
+```sh
 npm install
+```
 
-### Start the server:
+3. Start the server:
 
-npm run dev 
+```sh
+npm run dev
+```
+
+The server will now be running on http://localhost:5000 by default.
 
 ### Setting Up the Client
 
-# 2. Navigate to the `client` directory:
+1. Navigate to the `client` directory:
 
+```sh
 cd client
+```
 
-### Install dependencies:
+2. Install dependencies:
 
+```sh
 npm install
+```
 
-### Start the React development server:
+3. Start the Next.js development server:
 
-npm start
+```sh
+npm run dev
+```
 
-The client will now be running on http://localhost:3000 and the server on http://localhost:5000 by default.
+The client will now be running on http://localhost:3000.
 
 ### Environment Variables
 
-Make sure to create a .env file in the server directory with the following variables:
+Make sure to create a `.env.local` file in the root of the `client` directory and a `.env` file in the `server` directory with the necessary environment variables.
 
+For the server, you should have:
+
+```plaintext
 DB_URI=mongodb://localhost/echoecho
 JWT_SECRET=your_jwt_secret
 PORT=5000
-Replace your_jwt_secret with a secure, random string.
+```
+
+Replace `your_jwt_secret` with a secure, random string.
+
+For the client, if needed, add variables like:
+
+```plaintext
+NEXT_PUBLIC_API_BASE_URL=http://localhost:5000
+```
 
 ## Features
 
-User Authentication
-Real-time Chat
-Posts Creation and Interaction
-Media Sharing
-Friend Requests and Community Building
+- User Authentication
+- Real-time Chat
+- Posts Creation and Interaction
+- Media Sharing
+- Friend Requests and Community Building
 
+## Contributions
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-
